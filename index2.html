@@ -1,0 +1,382 @@
+<!DOCTYPE html> 
+ <html lang="en">
+
+    <style>
+        body {
+            /* border: 5px solid green; */
+            
+          margin: 0px;
+        }
+        
+        .container {
+            background: white;
+            position: relative;
+            width: 1000px;
+            height: 900px;
+            margin: 0 auto;
+            padding-left: 100px;
+            padding-right: 150px;
+            /* border: 3px solid black; */
+
+        }
+    
+        
+        #left {
+            width: 100px;
+            padding-left:10px;
+            padding-right: 20px;
+            
+            position: absolute;
+            top: 0px;
+            left: -40px;
+            text-align: center;
+            /* border: 2px solid black; */
+        }
+      
+      
+      
+      #right {
+        position: absolute;
+        padding-left:10px;
+        padding-right: 10px;
+        width: 400px;
+        top:0px;
+        right: -50px;
+        /* background: rgb(179, 177, 177); */
+        /* border: 2px solid black; */
+      }
+    
+      h2 {
+          color: red;
+      }
+
+      .recom {
+          background-color: rgb(231, 53, 53);
+          border-radius: 6px;
+            font-size: 15px;
+            width: 110px;
+            padding: 10px 25px;
+            border: none;
+            color: white;
+            transition-duration: 0.2s;
+      }
+
+      .recom:hover {
+        cursor: pointer;
+      }
+
+      .small_button {
+          transition-duration: 0.2s;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        width: 110px;
+        padding: 10px 25px;
+        color: black;
+      }
+
+      .small_button:hover {
+        background-color: rgb(231, 53, 53);
+        color: white;
+        cursor: pointer;
+      }
+
+      .search_bar {
+        width: 100%;
+      }
+
+      .search_bar input {
+        padding: 10px;
+        font-size: 15px;
+        border: none;
+        float: left;
+        width: 70%;
+        height: 25px;
+        background: #e1e1e1;
+        border-radius: 6px 0px 0px 6px;
+      }
+      
+      .search_bar button {
+        float: left;
+        height: 45px;
+        width: 25%;
+        padding: 8px 10px;
+        background: #2196F3;
+        color: white;
+        font-size: 15px;
+        border: none; 
+        cursor: pointer;
+        border-radius: 0px 6px 6px 0px;
+      }
+    
+
+
+    .more {
+        width: 99%;
+        border-top: 2px solid red;
+        background-color: #e1e1e1;
+    }
+
+    .more h4 {
+        margin: 15px;
+        font-size: 20px;
+    }
+
+    .inner {
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+
+    .inner button {
+        font-size: 13.5px;
+        border: none;
+        background-color: #e1e1e1;
+    }
+
+    .inner button:hover {
+        display: inline-block;
+        cursor: pointer;
+
+    }
+
+
+    .links {
+        border: 1px solid black;
+    }
+
+    #center {
+          width: 77.5%;
+          
+          /* 为什么一个parent中所有的children都是position：absolute这个parent就会消失 */
+          /* position: absolute; */
+      }
+
+      #center #news {
+        border-bottom: 1px solid #e1e1e1;
+        padding: 10px;
+      }
+
+      #center #news .title button {
+        font-size: 20px;
+        border: none;
+        background-color: white;
+        transition-duration: 0.2s;
+    }
+
+    #center #news .title button:hover {
+        color: rgb(87, 87, 164); 
+        cursor: pointer;
+    }
+
+      #center .inline {
+          display: inline-block;
+          /* border: 1px solid black; */
+          margin: 0px;
+      }
+
+      #center #news #special {
+          margin: 1px;
+          border: 2px solid rgb(113, 113, 252);
+      }
+      
+      #center #news #special button{
+          font-size: 11px;
+          text-align: center;
+          padding-top: 0px;
+          
+        color: rgb(113, 113, 252);
+    }
+
+      #center .inline button {
+          background-color: white;
+          border: none;
+          font-size: 12px;
+      }
+
+      #center .inline button:hover {
+        color: rgb(87, 87, 164); 
+          cursor: pointer;
+      }
+
+      #center #news span {
+          font-size: 12.5px;
+      }
+
+      
+      
+
+
+    header {
+        height: 30px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+    }
+
+    header button {
+        background-color: black;
+        color: white;
+        border: none;
+    }
+
+    header button:hover {
+        cursor: pointer;
+    }
+
+    header .right {
+        float: right;
+    }
+
+    #right .log_in {
+        background-color: #e1e1e1;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    #right .inside {
+        border: 1px solid rgb(167, 163, 163);
+        background-color: white;
+        margin: 20px;
+        text-align: center;
+        font-size: 13px;
+        padding: 20px;
+        
+    }
+
+    #right .log_in button{
+        width: 240px;
+        padding: 10px;
+        color: white;
+        background-color: rgb(231, 53, 53);
+        border: none;
+        border-radius: 6px;
+    }
+
+    #right .log_in button:hover {
+        background-color:rgb(243, 62, 62);
+        cursor: pointer;
+    }
+
+    
+    </style>
+    <body>
+        <header>
+            <button>下载app</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button>注册头条号</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button>北京</button>
+            &nbsp;&nbsp;&nbsp;
+            <button>晴 5℃  /  19℃ </button>
+            <button class = "right">头条产品</button>
+            <button class = "right">侵权投诉</button>
+        </header>
+        <div class = "container">
+            <div id = "center">
+            </div>
+            <div id = "left">
+                <h2>今日头条</h2>
+                <button class = "recom">推荐</button>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">西瓜视频</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">热点</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">直播</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">图片</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">科技</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">娱乐</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">游戏</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">体育</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">懂车帝</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">财经</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">更多</button></div>
+                <div style="height: 3px;"></div>
+                <div><button class = "small_button">数码</button></div> 
+                <div style="height: 3px;"></div>              
+            </div>
+            <div id = "right">
+                <div style = "height: 20px;"></div>
+                <div class = "search_bar">
+                    <input type="text" placeholder = "搜索站内咨询、视频或用户">
+                    <button type = "submit">搜索</button>
+                </div>
+                <div style = "height: 70px;"></div>
+                <div class = "log_in">
+                    <div class = "inside">
+                        <div style = "margin: 15px;">登录后可以保存您的浏览喜好、评论、收藏，并与APP同步，更可以发布微头条</div>
+                        <div style = "margin: 15px;"><button >登录</button></div>
+                    </div>
+                    
+                </div>
+                <div style = "height: 20px;"></div>
+                <div class = "more">
+                    <h4>更多</h4>
+                    <div class = "inner"><button>关于头条</button></div>                 
+                    <div class = "inner"><button>加入头条</button></div>              
+                    <div class = "inner"><button>媒体报告</button></div>                   
+                    <div class = "inner"><button>媒体合作</button></div>
+                    <div class = "inner"><button>产品合作</button></div>                 
+                    <div class = "inner"><button>合作说明</button></div>              
+                    <div class = "inner"><button>广告投放</button></div>                   
+                    <div class = "inner"><button>联系我们</button></div>
+                    <div class = "inner"><button>用户协议</button></div>                 
+                    <div class = "inner"><button>隐私政策</button></div>              
+                    <div class = "inner"><button>侵权投诉</button></div>                   
+                    <div class = "inner"><button>廉洁举报</button></div>
+                    <div class = "inner"><button>企业认证</button></div>                 
+                    <div class = "inner"><button>肺炎求助</button></div>              
+                    <div class = "inner"><button>辟谣专区</button></div>                   
+                </div>
+                <div style = "height: 20px;"></div>
+                <div class = "more">
+                    <h4>友情链接</h4>
+                    <div class = "inner"><button>光明网</button></div>                 
+                    <div class = "inner"><button>央广网</button></div>              
+                    <div class = "inner"><button>国际在线</button></div>                   
+                    <div class = "inner"><button>中国西藏网</button></div>
+                    <div class = "inner"><button>参考消息</button></div>                 
+                    <div class = "inner"><button>环球网</button></div>              
+                    <div class = "inner"><button>中青在线</button></div>                   
+                    <div class = "inner"><button>中青网</button></div>
+                    <div class = "inner"><button>中工网</button></div>                 
+                    <div class = "inner"><button>海外网</button></div>              
+                    <div class = "inner"><button>中国网</button></div>                   
+                    <div class = "inner"><button>未来网</button></div>
+                    <div class = "inner"><button>千龙网</button></div>                 
+                    <div class = "inner"><button>新京报</button></div>              
+                    <div class = "inner"><button>北青网</button></div>
+                    <div class = "inner"><button>法制晚报</button></div>                 
+                    <div class = "inner"><button>北京晨报</button></div>              
+                    <div class = "inner"><button>北京商报</button></div>                   
+                    <div class = "inner"><button>北京娱乐信报</button></div>
+                    <div class = "inner"><button>奥一网</button></div>                 
+                    <div class = "inner"><button>金羊网</button></div>              
+                    <div class = "inner"><button>华商网</button></div>                   
+                    <div class = "inner"><button>新民网</button></div>
+                    <div class = "inner"><button>红网</button></div>                 
+                    <div class = "inner"><button>中国江苏网</button></div>              
+                    <div class = "inner"><button>中国江西网</button></div>                   
+                    <div class = "inner"><button>齐鲁网</button></div>
+                    <div class = "inner"><button>海南网</button></div>                 
+                    <div class = "inner"><button>安徽网</button></div>              
+                    <div class = "inner"><button>河北新闻网</button></div>
+                    <div class = "inner"><button>闽南网</button></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="app2.js"></script>
+    </body>
+
+</html>
